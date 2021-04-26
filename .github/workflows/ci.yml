@@ -33,7 +33,7 @@ jobs:
 
       - name: Install black-nb
         run: |
-          pip install black-nb
+          pip install black-nb==0.4.0
 
       - name: Check Notebooks
         run: |

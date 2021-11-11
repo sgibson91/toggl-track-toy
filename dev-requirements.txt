@@ -1,2 +1,1 @@
-black-nb==0.4.0
 nbdime==3.0.0

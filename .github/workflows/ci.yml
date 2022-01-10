@@ -14,12 +14,5 @@ jobs:
       sgibson91/.github/.github/workflows/python-lint-format.yaml@main
 
   clean-notebooks:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@master
-
-      - name: Ensure Clean Jupyter Notebooks
-        uses: ResearchSoftwareActions/EnsureCleanNotebooksAction@1.1
-
+    uses:
+      sgibson91/.github/.github/workflows/clean-notebook-outputs.yaml@main

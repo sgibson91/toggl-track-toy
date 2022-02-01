@@ -5,4 +5,4 @@ jupyter==1.0.0
 matplotlib==3.4.1
 numpy==1.20.2
 pandas==1.2.4
-voila==0.2.9
+voila==0.3.1

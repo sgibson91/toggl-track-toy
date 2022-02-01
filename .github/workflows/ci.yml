@@ -9,10 +9,6 @@ on:
       - main
 
 jobs:
-  python-lint-format:
-    uses:
-      sgibson91/.github/.github/workflows/python-lint-format.yaml@main
-
   clean-notebooks:
     uses:
       sgibson91/.github/.github/workflows/clean-notebook-outputs.yaml@main

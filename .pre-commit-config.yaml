@@ -7,6 +7,7 @@ repos:
   rev: 22.1.0
   hooks:
   - id: black
+  - id: black-jupyter
 - repo: https://github.com/pycqa/flake8
   rev: 4.0.1
   hooks:

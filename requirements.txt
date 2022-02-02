@@ -2,7 +2,7 @@ ghapi==0.1.19
 ipympl==0.8.7
 ipywidgets==7.6.5
 jupyter==1.0.0
-matplotlib==3.4.1
+matplotlib==3.5.1
 numpy==1.21.0
 pandas==1.2.4
 voila==0.3.1

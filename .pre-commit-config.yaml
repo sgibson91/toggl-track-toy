@@ -1,6 +1,6 @@
 repos:
 - repo: https://github.com/nbQA-dev/nbQA
-  rev: 1.5.1
+  rev: 1.5.2
   hooks:
   - id: nbqa-pyupgrade
     args: ["--py36-plus"]

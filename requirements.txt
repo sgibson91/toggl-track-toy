@@ -1,6 +1,6 @@
-ghapi==1.0.0
+ghapi
 ipympl==0.9.0
-ipywidgets==8.0.1
+ipywidgets
 jupyter==1.0.0
 matplotlib==3.6.0
 numpy==1.23.0

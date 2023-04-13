@@ -1,0 +1,36 @@
+name: Create a Binder Badge to test changes
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+
+jobs:
+  create-binder-badge:
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Comment on PR with Binder link
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            var PR_HEAD_REF = process.env.PR_HEAD_REF;
+            var PR_HEAD_USER = process.env.PR_HEAD_USER;
+            var PR_HEAD_REPO = process.env.PR_HEAD_REPO;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/${PR_HEAD_USER}/${PR_HEAD_REPO}/${PR_HEAD_REF}?urlpath=%2Fvoila%2Frender%2Fnotebooks%2Fanalysis%2Ftime_tracking_analysis.ipynb_`
+            })
+        env:
+          PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          PR_HEAD_USER: ${{ github.event.pull_request.head.repo.owner.login }}
+          PR_HEAD_REPO: ${{ github.event.pull_request.head.repo.name }}

@@ -28,7 +28,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/${PR_HEAD_USER}/${PR_HEAD_REPO}/${PR_HEAD_REF}?urlpath=%2Fvoila%2Frender%2Fnotebooks%2Fanalysis%2Ftime_tracking_analysis.ipynb)_`
+              body: `Test this PR on Binder :point_right: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/${PR_HEAD_USER}/${PR_HEAD_REPO}/${PR_HEAD_REF}?urlpath=%2Fvoila%2Frender%2Fnotebooks%2Fanalysis%2Ftime_tracking_analysis.ipynb)`
             })
         env:
           PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
